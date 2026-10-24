@@ -39,7 +39,7 @@ public class DmmScraping(
 
             await processor.LoadParsedPages(cancellationToken);
 
-            var files = Directory.GetFiles(tempDirectory, "*.html", SearchOption.AllDirectories)
+            var files = Directory.GetFiles(tempDirectory, "*.html", SearchOption.TopDirectoryOnly)
                 .Where(f => !processor.ExistingPages.ContainsKey(Path.GetFileName(f)))
                 .ToList();
 
