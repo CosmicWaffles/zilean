@@ -38,4 +38,8 @@
       <ProjectReference Include="..\..\src\Zilean.ApiService\Zilean.ApiService.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="Fixtures/DmmHashlists/**/*" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+
 </Project>
